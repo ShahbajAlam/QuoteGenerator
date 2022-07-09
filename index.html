@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Quote Generator</title>
+        <link rel="shortcut icon" href="quote.png" type="image/x-icon" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <meta
+            name="description"
+            content="Generate inspirational quotes and tweet them!!"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <script src="index.js" defer></script>
+    </head>
+    <body>
+        <div class="backdrop hidden"></div>
+        <div class="quote__container">
+            <div class="quote__text--container">
+                <span><i class="fa-solid fa-quote-left"></i></span>
+                <h1>Get random inspirational quotes</h1>
+            </div>
+
+            <h2 class="author"></h2>
+
+            <div class="button__container">
+                <button class="twitter__btn">
+                    <i class="fa-brands fa-twitter"></i>
+                </button>
+                <button class="new__quote--btn">New Quote</button>
+            </div>
+        </div>
+        <div class="error"></div>
+    </body>
+</html>

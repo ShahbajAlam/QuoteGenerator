@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #dfdbe5;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%239C92AC' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+.quote__container {
+    position: relative;
+    width: 90%;
+    max-width: 50rem;
+    min-height: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.quote__container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: white;
+    opacity: 0.35;
+    z-index: -1;
+    border-radius: 2rem;
+}
+
+.quote__text--container {
+    display: flex;
+    justify-content: center;
+}
+
+.fa-quote-left {
+    align-self: flex-start;
+    font-size: 2.5rem;
+    margin-right: 1.5rem;
+    font-style: italic;
+}
+
+h1 {
+    align-self: flex-end;
+    margin-bottom: 2rem;
+}
+
+.author {
+    font-size: 1.2rem;
+}
+
+.button__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+button {
+    cursor: pointer;
+    font-size: 1.2rem;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    background-color: #ccc;
+}
+
+button:hover {
+    background-color: black;
+    color: #ccc;
+}
+
+button:active {
+    transform: scale(0.85);
+    transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+    transition-duration: 400ms;
+}
+
+.twitter__btn {
+    color: #1da1f2;
+}
+
+.twitter__btn:hover {
+    color: #1da1f2;
+    background-color: black;
+}
+
+.fa-twitter {
+    font-size: 1.4rem;
+}
+
+.error {
+    text-align: center;
+    width: 60%;
+    max-width: 30rem;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 15px;
+    color: black;
+    position: absolute;
+    opacity: 0;
+    top: -100%;
+    left: 50%;
+    z-index: 5;
+    transform: translateX(-50%);
+    transition: all;
+    transition-duration: 500ms;
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.backdrop {
+    position: absolute;
+    inset: 0;
+    background-color: black;
+    opacity: 0.4;
+    z-index: 2;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (min-width: 40rem) {
+    .fa-quote-left {
+        font-size: 4rem;
+    }
+    button {
+        font-size: 1.5rem;
+    }
+}
